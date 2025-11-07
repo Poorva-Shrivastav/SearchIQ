@@ -26,10 +26,9 @@ embedding_fn = MistralAIEmbeddings(
 base_dir = os.path.dirname(os.path.abspath(__file__))
 pdf_path = os.path.join(base_dir, "../assets/InfoTech_HR_Policy_Manual.pdf")
 
-# pdf_path = Path(__file__).resolve().parent.parent /"assets"/ "InfoTech_HR_Policy_Manual.pdf"
+pdf_path = os.path.abspath(pdf_path)
 
 loader1 = PyPDFLoader(pdf_path)
-
 
 pdf_docs = loader1.load()
 
